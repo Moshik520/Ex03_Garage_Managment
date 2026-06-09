@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex03.ConsoleUI", "Ex03.Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex03.GarageLogic", "Ex03.GarageLogic\Ex03.GarageLogic.csproj", "{2F57FE92-B5B7-46AF-B843-DABC66252571}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex03.GarageWebApi", "Ex03.GarageWebApi\Ex03.GarageWebApi.csproj", "{899BA225-2E76-4B36-AEC7-7D9CD0CC22C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2F57FE92-B5B7-46AF-B843-DABC66252571}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F57FE92-B5B7-46AF-B843-DABC66252571}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F57FE92-B5B7-46AF-B843-DABC66252571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{899BA225-2E76-4B36-AEC7-7D9CD0CC22C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{899BA225-2E76-4B36-AEC7-7D9CD0CC22C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{899BA225-2E76-4B36-AEC7-7D9CD0CC22C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{899BA225-2E76-4B36-AEC7-7D9CD0CC22C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

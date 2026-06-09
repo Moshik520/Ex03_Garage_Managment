@@ -1,0 +1,64 @@
+@host = http://localhost:5241/api/garage
+
+### List supported vehicle types
+GET {{host}}/vehicle-types
+Accept: application/json
+
+### Get the fields required to add a given vehicle type
+GET {{host}}/vehicle-types/FuelCar/required-fields
+Accept: application/json
+
+### Add a vehicle
+POST {{host}}/vehicles
+Content-Type: application/json
+
+{
+  "vehicleType": "FuelCar",
+  "licenseId": "111",
+  "modelName": "Mazda3",
+  "properties": {
+    "VehicleOwnerName": "Moshik",
+    "VehicleOwnerPhoneNumber": "0501234567",
+    "TierModel": "Michelin",
+    "CurrAirPressure": "30",
+    "EnergyPercentage": "50",
+    "CarColor": "1",
+    "NumOfDoors": "4"
+  }
+}
+
+### List all vehicles (optionally filter by status: InProcess | Ready | Paid)
+GET {{host}}/vehicles?status=InProcess
+Accept: application/json
+
+### Get full details of a vehicle
+GET {{host}}/vehicles/111
+Accept: application/json
+
+### Change a vehicle's status
+PUT {{host}}/vehicles/111/status
+Content-Type: application/json
+
+{
+  "status": "Ready"
+}
+
+### Inflate all wheels to maximum
+POST {{host}}/vehicles/111/inflate
+
+### Fuel a fuel-based vehicle
+POST {{host}}/vehicles/111/fuel
+Content-Type: application/json
+
+{
+  "liters": 10,
+  "fuelType": "Octan95"
+}
+
+### Charge an electric vehicle
+POST {{host}}/vehicles/333/charge
+Content-Type: application/json
+
+{
+  "minutes": 30
+}
